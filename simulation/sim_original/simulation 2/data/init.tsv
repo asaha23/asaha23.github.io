@@ -1,0 +1,32 @@
+0	0	0	Water 1	
+0	0	1	Ammonia 5, Acetic-Acid 5, Water 50	
+2	1	1	Water 25	
+2	2	1	Water 25	
+2	3	1	Water 25	
+2	3	2	Water 25	
+2	3	3	Water 25	
+2	3	4	Water 25	
+2	3	5	Water 25	
+2	3	6	Water 25	
+2	3	7	Water 25	
+2	4	1	Water 25	
+2	6	1	Water 25	
+8	2	1	Water 40, Hydrochloric-Acid 10, Sodium-Hydroxide 10	
+8	2	2	Water 40, Sodium-Hydroxide 10	
+8	2	3	Water 40, Hydrochloric-Acid 10, Sodium-Hydroxide 10	
+8	2	4	Ammonia 10, Hydrochloric-Acid 10	
+8	2	5	Cyanide 10, Hydrogen-Bromide 10	
+8	2	6	Chloride 10, Boron-Trichloride 10	
+8	3	1	Water 25, Hydrochloric-Acid 02	
+8	3	2	Water 25, Hydrogen-Fluoride 25	
+8	3	3	Water 25, Sodium-Hydroxide 02	
+8	3	4	Water 10, Ammonia 10	
+8	4	1	Water 25	
+8	4	2	Water 25	
+8	4	3	Water 25	
+8	4	4	Water 25	
+8	6	1	Hydrochloric-Acid 25	
+8	7	1	Water 50, Ammonia 05, Hydrochloric-Acid 05	
+8	7	2	Water 25	
+8	7	3	Water 50, Acetic-Acid 05	
+8	8	1	Water 25, Bicarbonate 05, Carbonate 05, Sodium-Bicarbonate 05, Sodium-I 05	

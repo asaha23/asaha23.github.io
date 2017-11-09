@@ -1,0 +1,20 @@
+0	0	0	Generic 10	
+4	2	1	Water 40, Hydrochloric-Acid 10, Sodium-Hydroxide 10	
+4	2	2	Water 40, Sodium-Hydroxide 10	
+4	2	3	Water 40, Hydrochloric-Acid 10, Sodium-Hydroxide 10	
+4	2	4	Ammonia 10, Hydrochloric-Acid 10	
+4	2	5	Cyanide 10, Hydrogen-Bromide 10	
+4	2	6	Chloride 10, Boron-Trichloride 10	
+4	3	1	Water 25, Hydrochloric-Acid 02	
+4	3	2	Water 25, Hydrogen-Fluoride 02	
+4	3	3	Water 25, Sodium-Hydroxide 02	
+4	3	4	Water 10, Ammonia 10	
+4	4	1	Water 25	
+4	4	2	Water 25	
+4	4	3	Water 25	
+4	4	4	Water 25	
+4	6	1	Hydrochloric-Acid 25	
+4	7	1	Water 50, Ammonia 05, Hydrochloric-Acid 05	
+4	7	2	Water 25	
+4	7	3	Water 50, Acetic-Acid 05	
+4	8	1	Water 25, Bicarbonate 05, Carbonate 05, Sodium-Bicarbonate 05, Sodium-I 05	

@@ -1,0 +1,7 @@
+create context menu
+
+performance expensive when lots of molecules onscreen... perhaps mFlag?  Karan
+
+pause timer not working at startup (molecules need initial velocity)
+
+reactant species' velocity should be sum of direction of reacting species

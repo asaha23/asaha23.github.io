@@ -1,0 +1,297 @@
+//Declaring variables
+var myCanvas = document.getElementById('world');
+var context = myCanvas.getContext('2d');
+var engine = Matter.Engine.create();
+var world = engine.world;
+var compoundBodyA;
+var Composites = Matter.Composites;
+var MouseConstraint = Matter.MouseConstraint;
+var mConstraint;
+var stack;
+var MolSlider = 0;
+var volumeslider =0;
+var MolSliderGraphX = [];
+var MolSliderGraphY = [];
+var positionx = [];
+var positiony =[];
+var bodynumber = [];
+var mConstraint;
+var startinit = 0;
+var stack1flag = 0;
+var arrayvalue = -1;
+var total ;
+var Moleculenumber = 20 ;
+var chartind = 0;
+var position2x = [],
+    cols = 2;
+for ( var i = 0; i < cols; i++ ) {
+    position2x[i] = []; 
+}
+var position2y = [],
+    cols = 2;
+for ( var i = 0; i < cols; i++ ) {
+    position2y[i] = []; 
+}
+var bodynumber2 = [],
+    cols = 2;
+for ( var i = 0; i < cols; i++ ) {
+    bodynumber2[i] = []; 
+}
+var resetflag = 0;
+
+
+engine.world.gravity.y = 0;
+
+//pause button
+function myFunction() {
+Matter.Render.stop(render);
+for (var i = 0; i < 20 ; i++){
+bodynumber[i].isSleeping = true;
+}
+
+if(Newmolecules2.length != 0){
+for (var j = 0 ; j < Newmolecules2.length ;j ++)
+{
+//if (bodynumber2[j].length != 0){
+//var i = 0;
+for (var i = 0; i < total ; i++){
+bodynumber2[j][i].isSleeping = true;
+}
+
+}}}
+
+//creating renderer
+var render = Matter.Render.create({
+  canvas: myCanvas,
+  engine: engine,
+  options: {
+  width: 600,
+  height: 600,
+  background: '#303030',
+  wireframes: false,
+  showAngleIndicator: false
+  }
+});
+
+//Add molecules
+var Newmolecules2 =[];
+function myFunctionN(){
+	stack1flag += 1;
+	arrayvalue += 1;
+	Newmolecules2[arrayvalue] = new WaterMolecules(MolSlider,1);
+	Matter.World.add(world,[Newmolecules2[arrayvalue]]);
+	chartind++;
+	DrawChart(MolSlider);
+	}
+
+//creating initial stack of molecules
+var Newmolecules1 = new WaterMolecules(4,5);
+
+//walls
+var floor = Matter.Bodies.rectangle(300,600, 600, 50, {
+  isStatic: true,
+  restitution: 1.0,
+  friction : 0,
+  render: {
+  visible: true
+  }
+});
+
+var leftwall = Matter.Bodies.rectangle(0,300, 50, 600, {
+  isStatic: true,
+  restitution: 1.0,
+  friction : 0,
+  render: {
+  visible: true
+  }
+});
+
+var rightwall = Matter.Bodies.rectangle(600,300, 50, 600, {
+  isStatic: true,
+  restitution: 1.0,
+  friction : 0,
+  render: {
+  visible: true
+  }
+});
+
+//roof
+var roof = Matter.Bodies.rectangle(300,0, 600, 50, {
+  isStatic: true,
+  restitution: 1.0,
+  friction : 0,
+  render: {
+    visible: true
+  }
+ });
+  
+ //roof2
+ function piston(volumeslider){
+
+var roof2 = Matter.Bodies.rectangle(300,volumeslider, 600, 50, {
+  isStatic: true,
+  restitution: 1.0,
+  friction : 0,
+  render: {
+    visible: true
+  }
+});
+
+if(volumeslider!=0) {
+Matter.World.add(world, [roof2]);
+}
+}
+
+//Adding objects to the world
+Matter.World.add(world,[floor,leftwall,rightwall,roof]);
+Matter.World.add(world, [Newmolecules1]);
+
+//Renderer
+Matter.Engine.run(engine);
+Matter.Render.run(render);
+
+function applyinitforce(){
+	for (i =0 ; i < 20; i+=2){
+Matter.Body.applyForce(bodynumber[i],{x : positionx[i] + Math.random()*0.01, y : positiony[i] +  Math.random()*0.01},{ x:Math.random()*0.01,y:Math.random()*0.01});   
+}
+for (i =1 ; i < 20; i+=2){
+Matter.Body.applyForce(bodynumber[i],{x : positionx[i] + Math.random()*0.01, y : positiony[i] +  Math.random()*0.01},{ x:-1*Math.random()*0.01,y:Math.random()*0.01});   
+}}
+
+//Start function
+function myFunctionS(){
+  //if(startinit == 0){
+   //applyinitforce();
+   //startinit++;
+//}
+
+engine.world.gravity.y = 0.0004;
+
+for (var i = 0; i < 20 ; i++){
+bodynumber[i].isSleeping = false;
+}
+if(Newmolecules2.length !=0){
+for (j = 0 ; j < Newmolecules2.length ; j++){
+if (bodynumber2[j].length != 0){
+for (var i = 0; i < total ; i++){
+bodynumber2[j][i].isSleeping = false;
+}}} }
+}
+
+//range of slider
+function showValue(newValue)
+{
+document.getElementById("range").innerHTML = newValue;
+MolSlider = newValue;
+return MolSlider;
+}
+
+//volume slider
+function showValue2(newValue2)
+{
+document.getElementById("range2").innerHTML = newValue2;
+volumeslider = newValue2;
+var pistonobject = new piston(volumeslider);
+}
+
+//volume slider
+function showValue3(newValue3)
+{
+document.getElementById("range2").innerHTML = newValue3;
+volumeslider = newValue2;
+var pistonobject = new piston(volumeslider);
+}
+
+
+//reset function
+function myFunctionR(){
+engine.world.gravity.y = 0;
+startinit = 0;
+Matter.World.clear(engine.world);
+Matter.Engine.clear(engine);
+Matter.World.add(world, [floor,leftwall,rightwall,roof]);
+var Newmolecules1 = new WaterMolecules(4,5);
+Matter.World.add(world, [Newmolecules1]);
+}
+
+if(chartind == 0){
+DrawChart(0);
+}
+else {
+DrawChart(MolSlider);
+}
+	
+function DrawChart(MolSlider){
+
+var yValLatest = MolSlider;
+
+var dps = []; // dataPoints
+var chart = new CanvasJS.Chart("chartContainer", {
+	title :{
+		text: "Output : Compounds"
+	},
+	axisY: {
+		title : "Molecules",
+		includeZero: true
+	}, 
+axisX: {
+		title : "Time(s)",
+		includeZero: true
+	}, 	
+	data: [{
+		type: "line",
+		dataPoints: dps
+	}]
+});
+
+var xVal = 0 ;
+var yVal = 20;
+var updateInterval = 1000;
+var dataLength = 60; // number of dataPoints visible at any point
+
+var updateChart = function (count) {
+     
+	count = count || 1;
+
+	for (var j = 0; j < count; j++) {
+		if( chartind == 1){
+		yVal = yVal + Math.round(yValLatest);
+		}
+		dps.push({
+			x: xVal,
+			y: yVal
+		});
+		xVal++;
+	}
+
+	if (dps.length > dataLength) {
+		dps.shift();
+	}
+
+	chart.render();
+};
+
+updateChart(dataLength);
+setInterval(function(){updateChart()}, updateInterval);
+chartind = 0;
+}
+//remove earlier piston
+function pistonremove(volumeslider){
+//Matter.World.remove(engine.world,[roof2]);
+Matter.World.add(world, [roof2]);
+
+}
+
+
+function piston(volumeslider){
+	
+//Matter.World.remove(engine.world,[roof2]);
+volumeslider = Math.round(volumeslider);
+
+
+Matter.World.add(world, [roof2]);
+//Matter.Engine.run(engine);
+//Matter.Render.run(render);
+}
+
+mConstraint = MouseConstraint.create(engine,options);

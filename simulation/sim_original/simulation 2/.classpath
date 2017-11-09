@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="lib" path="/Applications/Aptana Studio 3/plugins/processing.plugin.core_0.2.5.1/Resources/lib/core.jar"/>
+	<classpathentry kind="con" path="/org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/JVM Contents (MacOS X Default)"/>
+	<classpathentry kind="lib" path="/Users/niteshade/Documents/Processing/libraries/fisica/library/fisica.jar"/>
+	<classpathentry kind="lib" path="/Users/niteshade/Documents/Processing/libraries/fisica/library/JBox2D-2.0.1-b250-Library.jar"/>
+	<classpathentry kind="lib" path="/Users/niteshade/Documents/Processing/libraries/geomerative/library/batikfont.jar"/>
+	<classpathentry kind="lib" path="/Users/niteshade/Documents/Processing/libraries/geomerative/library/geomerative.jar"/>
+	<classpathentry kind="output" path="generated/compiler"/>
+</classpath>

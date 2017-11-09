@@ -1,0 +1,26 @@
+create context menu
+create footer
+
+database
+	elements
+	species
+		mass
+		density
+		molecular formula
+	reactions
+	sims
+		initial molecule seed
+		widgets and widget settings (JSON?)
+
+molecule sticking
+
+widgets
+	general
+		collapsing
+		stacking
+	pH monitor
+		fix algorithm
+		pOH plot?
+	molecule count monitor
+		expandable drawer showing molecule colors
+		fix overlapping plot lines

@@ -1,0 +1,14 @@
+Acetic-Acid, Ammonia	1	Ammonium, Acetate
+Acetic-Acid, Sodium-Hydroxide	1	Water, Sodium-I, Acetate
+Acetic-Acid, Water	1	Acetate, Hydronium
+Ammonia, Water	.1	Ammonium, Hydroxide
+Boron-Trichloride, Chloride	1	Boron-Tetrachloride
+Cyanide, Hydrogen-Bromide	1	Hydrogen-Cyanide, Bromide
+Hydrochloric-Acid, Ammonia	1	Chloride, Ammonium
+Hydrochloric-Acid, Sodium-Hydroxide	1	Sodium-Chloride, Water
+Hydrochloric-Acid, Water	1	Hydronium, Chloride
+Hydrogen-Fluoride, Water	1	Hydronium, Fluoride
+Lithium-Hydroxide, Water	1	Lithium-I, Hydroxide, Water
+Methylamine, Water	1	Methylammonium, Hydroxide
+Nitric-Acid, Water	1	Nitrate, Hydronium
+Sodium-Hydroxide, Water	1	Sodium-I, Water, Hydroxide

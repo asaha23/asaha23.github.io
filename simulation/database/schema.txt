@@ -1,0 +1,38 @@
+All primary and secondary keys should be automatically made by Django.
+
+
+Compounds
+	• id: primary key
+	• name (text)
+	• formula (text/html)
+	• mass (float)
+	• radius (float)
+	• imagePNG (blob)
+	• imageSVG (blob or text)
+	• imagePDF (blob)
+	many to many relationship with:
+		• Reactions
+		• Elements
+		
+Reactions (only for internal use)
+	• id: primary key
+	• type (text) either input or output
+	• probability (float)
+	• energy (text) energy consumed or released, depending on type
+	many to many relationship with:
+		• Compounds
+		
+Elements
+	• id: primary key
+	• name (text)
+	• atomicNumber (integer)
+	• atomicSymbol (text)
+	• formula (text)
+	• freezingPointKelvin (float)
+	• boilingPointKelvin (float)
+	• mass (float)
+	• density (float)
+	• radiusAtomic (float)
+	• radiusIonic (float)
+	many to many relationship with:
+		• Compounds

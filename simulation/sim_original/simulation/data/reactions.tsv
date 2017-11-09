@@ -1,0 +1,14 @@
+Water, Nitric-Acid	0.00001	Hydronium, Nitrate
+Hydronium, Fluoride	0.00001	Water, Water
+Hydroxide, Hydronium	0.00075	Water, Hydrogen-Fluoride
+Hydroxide, Ammonium	0.00150	Water, Ammonia
+Hydronium, Acetic-Acid	0.00150	Water, Acetic-Acid
+Hydrogen-Cyanide, Bromide	0.00150	Hydrogen-Bromide, Cyanide
+Water, Sodium-Hydroxide	0.00750	Hydroxide, Sodium-I
+Water, Acetic-Acid	0.01500	Hydroxide, Acetate
+Water, Ammonia	0.01500	Hydroxide, Ammonium
+Water, Methylamine	0.03000	Hydroxide, Methylammonium
+Water, Hydrogen-Fluoride	0.03000	Hydronium, Fluoride
+Water, Hydrochloric-Acid	0.12000	Hydronium, Chloride
+Hydrochloric-Acid, Ammonia	0.50000	Ammonium, Chloride
+Hydrogen-Bromide, Cyanide	1.00000	Hydrogen-Cyanide, Bromide

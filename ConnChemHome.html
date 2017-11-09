@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+ background-color: #303030;
+}
+img {
+    position: centered;
+    left: 100px;
+    top: 800px;
+    z-index: -1;
+}
+</style>
+<title>ConnChem</title>
+</head>
+<body>
+<div style="text-align:center;left:80px;top:100px;">
+    <font color = "red" size = "7" > Welcome to The Connected Chemistry Curriculum </font>
+<div style="position:relative;left:10px;top:20px;">	
+<picture>
+  <img src="CCenter.png" alt="img" align = "middle" width = "500" height ="100" style="vertical-align:top;">
+  <img src="iconChildren-1.png" alt="img" align = "middle" width = "500" height ="100" style="vertical-align:top;">
+ </picture>
+ </div>
+<div style="position:relative;left:20px;top:50px;">
+      <font color = "red" size = "5" >Department of Chemistry , University of Illinois Chicago</font>
+</div>
+<div style="position:relative;left:20px;top:100px;">
+      <font color = "red" size = "5" >Select one of the following Units -</font>
+</div>
+</div>
+<div style="position:relative;left:200px;top:150px;">
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+  <div class="dropdown">
+  <button onclick="myFunctionunit1()" class="dropbtn">Unit 1: Modeling Matter</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a id = "Sim1" href="Main.html" onclick = "SetSimNum()">Sim1:Making scientific observations with a Model </a>
+    <a href="Mainsim2.html" onclick = "SetSimNum()">Sim2:Classifying Matter </a>
+  </div>
+</div>
+</td>
+</tr>
+<style>
+.dropbtn {
+    background-color: #F1F1F1;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #F1F1F1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    color: black;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+
+<script>
+
+function myFunctionunit1() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function SetSimNum(){
+document.getElementById("Sim1").setAttribute("SimulationNumber","1");
+}
+</script>
+  <tr>
+    <td class="second"><font color = "red" size = "5" ></font></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

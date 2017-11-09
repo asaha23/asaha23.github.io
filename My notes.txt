@@ -1,0 +1,20 @@
+int getrand(int x) {
+	int q = random.nextInt();
+	if (q < 0) q = -q;
+	return q % x;
+ }
+
+
+m.dx = (getrand(100)/99.0-.5);
+	    m.dy = java.lang.Math.sqrt(1-m.dx*m.dx);
+		
+		static final int SPEED_RANDOM  = 0;
+ static final int SPEED_EQUAL   = 1;
+ static final int SPEED_EXTREME = 2;
+
+ 
+ if (speed == SPEED_EXTREME) {
+		double q = ((i & 2) > 0) ? 3 : .1;
+		m.dx *= q;
+		m.dy *= q;
+	    }
